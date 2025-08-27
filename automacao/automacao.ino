@@ -30,7 +30,7 @@ void loop (){
     digitalWrite(pinoRelePortao, LOW);
   }
 
-  if(digitalRead(pinoSensorCasa) == HIGH){
+  if(digitalRead(pinoSensorCasa) == HIGH && valorDaLumisiodade < limiarEscuro){
     digitalWrite(pinoReleCasa, HIGH);
     delay(delayPadrao);
   } else {
