@@ -23,14 +23,14 @@ void loop (){
 
   int valorDaLumisiodade = analogRead(pinoA1);
 
-  if(digitalRead(pinoSensorPortao) == HIGH && valorDaLumisiodade < limiarEscuro){
+  if(digitalRead(pinoSensorPortao) == HIGH && valorDaLumisiodade > limiarEscuro){
     digitalWrite(pinoRelePortao, HIGH);
     delay(delayPadrao);
   } else {
     digitalWrite(pinoRelePortao, LOW);
   }
 
-  if(digitalRead(pinoSensorCasa) == HIGH && valorDaLumisiodade < limiarEscuro){
+  if(digitalRead(pinoSensorCasa) == HIGH && valorDaLumisiodade > limiarEscuro){
     digitalWrite(pinoReleCasa, HIGH);
     delay(delayPadrao);
   } else {
